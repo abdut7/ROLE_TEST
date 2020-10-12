@@ -28,4 +28,23 @@
   * This API for update module permissions in a specific ROLE 
   * If make ``fale`` value in a module ,The changes (Can't permite) any user under that Role
 
+  ## Solution Documentation
+    * Every user have a ROLE name (set in user creation)
+    * When Login user ,keep ROLE name in jwt token
+    * In Each Request ,Resolve jwt token (Token verification) in Node middleware (code written in ./libs/middleware/jwtVerifier.ts)
+    * Then get Role name from token append with request body 
+    * Then check any permission allowed for that ROLE to that API (if not allows Return error message)
+
+  ## Testing Documentation
+   * Login with 
+      ``{ 
+          "strName": "admin",
+          "strPassword":"admin123"
+       }``
+   * Then get Token,Assign that to all other Header Autherisation
+   * Create a new Role  using ``create_role`` API
+   * Create a new user using ``create_user`` with asign a ROLE name before created
+   * Update (make false value for any API) using ``update_role_module`` ,Get json for all module from ``get_role_module`` API
+   * check Permision allow or Not for that API befor make false value
+     
  
