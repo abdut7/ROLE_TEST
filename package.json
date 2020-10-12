@@ -1,0 +1,36 @@
+{
+  "name": "wupper_valley",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "build-common": "webpack --config ./microservices/common_services/webpack.config.js",
+    "build-open": "webpack --config ./microservices/open_services/webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ata tech",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.6",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.7",
+    "redis": "^3.0.2",
+    "request": "^2.88.2",
+    "ts-node": "^8.9.1",
+    "webpack": "^4.43.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.5.14",
+    "@types/node": "^13.13.4",
+    "nodemon": "^2.0.4",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.8.3",
+    "webpack-cli": "^3.3.11"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "watch": ["microservices","libs"],
+  "ext": "ts"
+}

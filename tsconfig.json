@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es2018",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "rootDir": ".",
+    "outDir": "dist",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "listFiles": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "lib": ["es2015"],
+  "include": ["./libs/**/*", "./microservices/**/*"],
+  "exclude": [
+    "node_modules",
+    "./microservices/**/*.spec.ts",
+    "./libs/**/*.spec.ts"
+  ],
+  "presets": ["es2015"]
+}
